@@ -1,0 +1,29 @@
+apply from: "$rootDir/gradle/repositories.gradle"
+apply from: "$rootDir/gradle/dependencies.gradle"
+apply from: "$rootDir/gradle/artifacts.gradle"
+apply plugin: "idea"
+apply plugin: "eclipse"
+
+repositories {
+    maven { url repos.twttr }
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile([
+        libs.twitterServer,
+        libs.twitterUtil
+    ])
+
+}
+
+task copyToLib(type: Copy) {
+    into "$buildDir/libs"
+    from configurations.runtime
+}
+// Gradle Wrapper Settings
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.4"
+}
+

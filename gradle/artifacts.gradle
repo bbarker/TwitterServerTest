@@ -1,0 +1,14 @@
+apply plugin: "java"
+apply plugin: "scala"
+
+sourceCompatibility = 1.6
+dependencies {
+    compile libs.scala
+}
+
+
+// Add Provided Dependency Support
+configurations { compile }
+sourceSets.main.compileClasspath += configurations.compile
+sourceSets.test.compileClasspath += configurations.compile
+sourceSets.test.runtimeClasspath += configurations.compile

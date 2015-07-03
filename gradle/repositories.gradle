@@ -1,0 +1,8 @@
+ext {
+    repos = [:]
+}
+
+repos += [
+    twttr:"http://maven.twttr.com/"
+]
+

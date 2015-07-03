@@ -1,0 +1,12 @@
+ext {
+    versions = [:]
+    libs = [:]
+}
+versions += [
+        scala: "2.10",
+]
+libs += [
+        scala: "org.scala-lang:scala-library:$versions.scala.3",
+        twitterServer: "com.twitter:twitter-server_2.11:1.11.0",
+        twitterUtil: "com.twitter:util-core_2.11:6.25.0"
+]
