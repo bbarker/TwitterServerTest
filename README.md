@@ -1,2 +1,1 @@
-# KomVis
-Tools for analyzing and visualizing real-time communication streams.
+# Tools for testing uses of TwitterServer and the Twitter API
