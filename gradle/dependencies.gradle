@@ -3,7 +3,6 @@ ext {
     libs = [:]
 }
 versions += [
-        scala: "2.10",
 ]
 libs += [
         scala: "org.scala-lang:scala-library:$versions.scala.3",
